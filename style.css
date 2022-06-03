@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #221b1b;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #221b1b;
+    width: 150px;
+    height: 50px;
+    margin: 24px 0;
+    border: 2px solid rgb(131, 131, 131);
+    position: relative;
+    cursor: pointer;
+    transition: width 200ms ease-in;
+}
+
+.btn1::after,
+.btn1::before,
+.btn2::after,
+.btn2::before,
+.btn3::after,
+.btn3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 10px;
+}
+
+.btn1::after,
+.btn2::after,
+.btn3::after {
+    bottom: -8px;
+    right: 20px;
+    transition: transform 300ms ease-in;
+
+}
+
+.btn1::before,
+.btn2::before,
+.btn3::before {
+    top: -8px;
+    left: 20px;
+    transition: transform 300ms ease-in;
+}
+
+.btn1:hover {
+    border: 2px solid red;
+    box-shadow:
+        5px 13px 48px 10px rgba(231, 17, 17, 0.6);
+    color: red;
+}
+
+.btn2:hover {
+    border: 2px solid blue;
+    box-shadow:
+        5px 13px 48px 10px rgba(44, 59, 225, 0.6);
+    color: blue;
+}
+
+.btn3:hover {
+    border: 2px solid green;
+    box-shadow:
+        5px 13px 48px 10px rgba(40, 213, 55, 0.6);
+    color: green;
+}
+
+.btn1:hover h2 {
+    letter-spacing: 5px;
+    color: rgba(231, 17, 17, 0.6);
+}
+
+.btn2:hover h2 {
+    letter-spacing: 5px;
+    color: rgba(44, 59, 225, 0.6);
+
+}
+
+.btn3:hover h2 {
+    letter-spacing: 5px;
+    color: rgba(40, 213, 55, 0.6);
+
+}
+
+
+.btn1::after {
+    border: 2px solid red;
+}
+
+.btn1::before {
+    border: 2px solid red;
+}
+
+.btn2::after {
+    border: 2px solid blue;
+}
+
+
+.btn2::before {
+    border: 2px solid blue;
+}
+
+.btn3::after {
+    border: 2px solid green;
+}
+
+.btn3::before {
+    border: 2px solid green;
+}
+
+.btn:hover {
+    width: 175px;
+    height: 55px;
+}
+
+.btn1:hover:after,
+.btn2:hover:after,
+.btn3:hover:after {
+    transform: translate(-120px, 0);
+
+}
+
+.btn1:hover:before,
+.btn2:hover:before,
+.btn3:hover:before {
+    transform: translate(120px, 0);
+}
